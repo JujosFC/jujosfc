@@ -1,47 +1,171 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JujosFC</title>
+
+  <title>JujosFC | Fútbol en Pamplona</title>
+
+  <meta name="description" content="Web oficial de JujosFC, equipo de fútbol de Pamplona fundado en 2025.">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: white;
-      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7fb;
+      color: #172033;
     }
 
     header {
-      padding: 40px 20px;
-      background: #1a1a1a;
+      background: #1261c9;
+      color: white;
+      text-align: center;
+      padding: 50px 20px 60px;
     }
 
-    header img {
-      width: 180px;
+    .escudo {
+      width: 190px;
       max-width: 70%;
+      height: auto;
+      display: block;
+      margin: 0 auto 25px;
     }
 
-    h1 {
-      font-size: 48px;
-      margin: 20px 0 10px;
+    header h1 {
+      margin: 0;
+      font-size: 52px;
+      font-weight: 800;
+      letter-spacing: -1px;
     }
 
-    p {
+    header p {
+      margin: 12px 0 0;
       font-size: 20px;
     }
 
-    .boton {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 15px 30px;
-      background: white;
-      color: #111;
-      text-decoration: none;
-      border-radius: 8px;
+    .datos-club {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .dato {
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+      padding: 12px 20px;
       font-weight: bold;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+
+    section {
+      background: white;
+      border-radius: 16px;
+      padding: 35px;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    section h2 {
+      margin-top: 0;
+      color: #1261c9;
+      font-size: 30px;
+    }
+
+    .presentacion {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .tabla-contenedor {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th {
+      background: #1261c9;
+      color: white;
+      padding: 14px;
+      text-align: left;
+    }
+
+    td {
+      padding: 14px;
+      border-bottom: 1px solid #e4e8ef;
+    }
+
+    tr:nth-child(even) {
+      background: #f6f8fb;
+    }
+
+    .numero {
+      font-weight: bold;
+      color: #1261c9;
+      width: 70px;
+    }
+
+    .posicion {
+      font-weight: bold;
+      color: #4d596b;
+      width: 90px;
+    }
+
+    .proximamente {
+      text-align: center;
+      padding: 30px 10px;
+      background: #f1f6ff;
+      border-radius: 12px;
+      color: #1261c9;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    footer {
+      background: #1261c9;
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+      margin-top: 20px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 40px;
+      }
+
+      section {
+        padding: 25px 18px;
+      }
+
+      section h2 {
+        font-size: 26px;
+      }
+
+      th,
+      td {
+        padding: 11px 9px;
+      }
     }
   </style>
 </head>
@@ -49,14 +173,190 @@
 <body>
 
   <header>
-    <img src="escudo.jpg" alt="Escudo de JujosFC">
+
+    <img
+      class="escudo"
+      src="escudo.jpg"
+      alt="Escudo de JujosFC"
+    >
 
     <h1>JujosFC</h1>
 
-    <p>Bienvenidos a la web oficial de JujosFC ⚽</p>
+    <p>Equipo de fútbol de Pamplona</p>
 
-    <a class="boton" href="#">Próximamente</a>
+    <div class="datos-club">
+      <div class="dato">📍 Pamplona</div>
+      <div class="dato">📅 Fundado en 2025</div>
+      <div class="dato">⚽ Fútbol</div>
+    </div>
+
   </header>
+
+
+  <main>
+
+    <section>
+
+      <h2>⚽ JujosFC</h2>
+
+      <p class="presentacion">
+        Un equipo creado entre amigos con ganas de competir
+        y disfrutar del fútbol.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>👥 Plantilla</h2>
+
+      <div class="tabla-contenedor">
+
+        <table>
+
+          <thead>
+            <tr>
+              <th>N.º</th>
+              <th>Posición</th>
+              <th>Jugador</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td class="numero">1</td>
+              <td class="posicion">POR</td>
+              <td>Patrick Joseph Moreno Chamorro</td>
+            </tr>
+
+            <tr>
+              <td class="numero">3</td>
+              <td class="posicion">LD</td>
+              <td>Mikel Balmaseda Ortiz</td>
+            </tr>
+
+            <tr>
+              <td class="numero">4</td>
+              <td class="posicion">DFC</td>
+              <td>Jon Armendariz Zufia</td>
+            </tr>
+
+            <tr>
+              <td class="numero">5</td>
+              <td class="posicion">DFC</td>
+              <td>Diego Cajal Araujo</td>
+            </tr>
+
+            <tr>
+              <td class="numero">8</td>
+              <td class="posicion">MC</td>
+              <td>Xabier Oroz Pérez de Obanos</td>
+            </tr>
+
+            <tr>
+              <td class="numero">9</td>
+              <td class="posicion">DC</td>
+              <td>Joel Ferri Bustamante</td>
+            </tr>
+
+            <tr>
+              <td class="numero">10</td>
+              <td class="posicion">EI</td>
+              <td>Iker Aguirre Izcue</td>
+            </tr>
+
+            <tr>
+              <td class="numero">11</td>
+              <td class="posicion">LI</td>
+              <td>Manuel Pérez Werner</td>
+            </tr>
+
+            <tr>
+              <td class="numero">12</td>
+              <td class="posicion">LI</td>
+              <td>Aitor Zamora Leon</td>
+            </tr>
+
+            <tr>
+              <td class="numero">13</td>
+              <td class="posicion">POR</td>
+              <td>Javi Díaz González</td>
+            </tr>
+
+            <tr>
+              <td class="numero">16</td>
+              <td class="posicion">LI</td>
+              <td>César García Larrondo</td>
+            </tr>
+
+            <tr>
+              <td class="numero">17</td>
+              <td class="posicion">DFC</td>
+              <td>Enrique Mugueta Juango</td>
+            </tr>
+
+            <tr>
+              <td class="numero">18</td>
+              <td class="posicion">MC</td>
+              <td>Aitor Herrero Azcona</td>
+            </tr>
+
+            <tr>
+              <td class="numero">20</td>
+              <td class="posicion">MC</td>
+              <td>David González de Langarica Mozaz</td>
+            </tr>
+
+            <tr>
+              <td class="numero">21</td>
+              <td class="posicion">DC</td>
+              <td>Pablo García Flandes</td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>📅 Próximos partidos</h2>
+
+      <div class="proximamente">
+        Próximamente se publicará el calendario de JujosFC.
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>🏆 JujosFC</h2>
+
+      <p class="presentacion">
+        Desde Pamplona, seguimos trabajando para competir,
+        disfrutar y crecer juntos como equipo.
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p><strong>JujosFC</strong></p>
+
+    <p>© 2025 JujosFC · Pamplona</p>
+
+  </footer>
 
 </body>
 </html>
+```
