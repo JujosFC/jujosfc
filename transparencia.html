@@ -1,11 +1,10 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Transparencia | JujosFC</title>
+  <title>JujosFC | Transparencia</title>
 
   <style>
     * {
@@ -19,26 +18,9 @@
       color: #172033;
     }
 
-    header {
-      background: #1261c9;
-      color: white;
-      text-align: center;
-      padding: 35px 20px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 38px;
-    }
-
-    header p {
-      margin: 10px 0 0;
-      font-size: 18px;
-    }
-
     nav {
       background: white;
-      padding: 15px;
+      padding: 16px;
       text-align: center;
       box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     }
@@ -50,24 +32,44 @@
       margin: 0 12px;
     }
 
+    header {
+      background: #1261c9;
+      color: white;
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 42px;
+    }
+
+    header p {
+      font-size: 18px;
+    }
+
     main {
       max-width: 1100px;
       margin: auto;
-      padding: 35px 20px;
+      padding: 40px 20px;
     }
 
-    .login {
-      max-width: 420px;
-      margin: 30px auto;
+    section {
       background: white;
-      padding: 30px;
       border-radius: 16px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      padding: 30px;
+      margin-bottom: 25px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
     }
 
-    .login h2 {
+    h2 {
       color: #1261c9;
-      text-align: center;
+      margin-top: 0;
+    }
+
+    .login-box {
+      max-width: 450px;
+      margin: auto;
     }
 
     input,
@@ -76,8 +78,9 @@
       width: 100%;
       padding: 13px;
       margin-top: 10px;
+      margin-bottom: 15px;
       border-radius: 8px;
-      border: 1px solid #d5dce7;
+      border: 1px solid #ccd4df;
       font-size: 16px;
     }
 
@@ -90,74 +93,42 @@
     }
 
     button:hover {
-      background: #0d4fa8;
+      opacity: 0.9;
     }
 
-    .logout {
-      background: #687386;
-      max-width: 160px;
-      margin: 20px auto;
-      display: block;
-    }
-
-    .error {
-      color: #c62828;
-      text-align: center;
-      margin-top: 12px;
-      font-weight: bold;
-    }
-
-    .hidden {
+    .oculto {
       display: none;
+    }
+
+    .mensaje {
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      background: #f1f6ff;
     }
 
     .resumen {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-bottom: 30px;
+      gap: 15px;
     }
 
     .tarjeta {
-      background: white;
-      padding: 25px;
-      border-radius: 16px;
+      padding: 20px;
+      border-radius: 12px;
+      background: #f4f7fb;
       text-align: center;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
     }
 
-    .tarjeta h3 {
-      margin-top: 0;
-      color: #687386;
-    }
-
-    .cantidad {
-      font-size: 30px;
-      font-weight: bold;
-      color: #1261c9;
-    }
-
-    section {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      margin-bottom: 25px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-    }
-
-    section h2 {
-      color: #1261c9;
-      margin-top: 0;
-    }
-
-    .admin-box {
-      border: 2px solid #1261c9;
+    .tarjeta strong {
+      display: block;
+      font-size: 25px;
+      margin-top: 8px;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
     }
 
     th {
@@ -172,27 +143,6 @@
       border-bottom: 1px solid #e4e8ef;
     }
 
-    tr:nth-child(even) {
-      background: #f6f8fb;
-    }
-
-    .positivo {
-      color: #16833b;
-      font-weight: bold;
-    }
-
-    .negativo {
-      color: #c62828;
-      font-weight: bold;
-    }
-
-    .info {
-      background: #eef5ff;
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-
     @media (max-width: 700px) {
       .resumen {
         grid-template-columns: 1fr;
@@ -201,217 +151,126 @@
       section {
         padding: 20px;
       }
-
-      table {
-        font-size: 14px;
-      }
-
-      th,
-      td {
-        padding: 9px;
-      }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>💰 Transparencia JujosFC</h1>
-    <p>Información económica del club</p>
-  </header>
-
   <nav>
     <a href="index.html">🏠 Inicio</a>
     <a href="transparencia.html">💰 Transparencia</a>
   </nav>
 
+  <header>
+    <h1>💰 Transparencia</h1>
+    <p>Información económica de JujosFC</p>
+  </header>
 
-  <!-- LOGIN -->
+  <main>
 
-  <div id="loginBox" class="login">
+    <section id="loginSection">
 
-    <h2>🔐 Acceso</h2>
+      <div class="login-box">
 
-    <p>
-      Puedes entrar como usuario para consultar la información
-      o como administrador para gestionar los movimientos.
-    </p>
+        <h2>🔐 Acceso</h2>
 
-    <input
-      type="text"
-      id="usuario"
-      placeholder="Usuario"
-    >
+        <p>
+          Inicia sesión para consultar la información económica de JujosFC.
+        </p>
 
-    <input
-      type="password"
-      id="password"
-      placeholder="Contraseña"
-    >
+        <input
+          type="email"
+          id="email"
+          placeholder="Email"
+        >
 
-    <button onclick="login()">
-      Entrar
-    </button>
+        <input
+          type="password"
+          id="password"
+          placeholder="Contraseña"
+        >
 
-    <div id="loginError" class="error"></div>
+        <button onclick="iniciarSesion()">
+          Iniciar sesión
+        </button>
 
-  </div>
+        <div id="loginMensaje"></div>
 
-
-  <!-- CONTENIDO -->
-
-  <main id="contenido" class="hidden">
-
-    <div class="info">
-      <strong id="bienvenida"></strong>
-      <br>
-      Esta sección muestra la situación económica de JujosFC.
-    </div>
-
-
-    <!-- RESUMEN -->
-
-    <div class="resumen">
-
-      <div class="tarjeta">
-        <h3>💵 Ingresos</h3>
-        <div id="totalIngresos" class="cantidad">0,00 €</div>
       </div>
-
-      <div class="tarjeta">
-        <h3>💸 Gastos</h3>
-        <div id="totalGastos" class="cantidad">0,00 €</div>
-      </div>
-
-      <div class="tarjeta">
-        <h3>💰 Saldo</h3>
-        <div id="saldo" class="cantidad">0,00 €</div>
-      </div>
-
-    </div>
-
-
-    <!-- FILTROS -->
-
-    <section>
-
-      <h2>🔎 Filtros</h2>
-
-      <label for="filtroAno">
-        Año:
-      </label>
-
-      <select id="filtroAno" onchange="mostrarMovimientos()">
-        <option value="todos">Todos</option>
-      </select>
 
     </section>
 
 
-    <!-- ADMIN -->
+    <section id="panel" class="oculto">
 
-    <section id="adminPanel" class="admin-box hidden">
+      <h2>📊 Resumen económico</h2>
 
-      <h2>⚙️ Administración</h2>
+      <div class="resumen">
 
-      <p>
-        Solo los administradores pueden añadir movimientos.
-      </p>
+        <div class="tarjeta">
+          Ingresos
+          <strong id="totalIngresos">0,00 €</strong>
+        </div>
 
-      <label>
-        Tipo
-      </label>
+        <div class="tarjeta">
+          Gastos
+          <strong id="totalGastos">0,00 €</strong>
+        </div>
+
+        <div class="tarjeta">
+          Saldo
+          <strong id="saldo">0,00 €</strong>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section id="adminPanel" class="oculto">
+
+      <h2>➕ Añadir movimiento</h2>
 
       <select id="tipo">
-        <option value="ingreso">Ingreso</option>
         <option value="gasto">Gasto</option>
+        <option value="ingreso">Ingreso</option>
       </select>
-
-
-      <label>
-        Cantidad (€)
-      </label>
-
-      <input
-        type="number"
-        id="cantidad"
-        placeholder="Ej. 50"
-        step="0.01"
-        min="0"
-      >
-
-
-      <label>
-        Categoría
-      </label>
-
-      <select id="categoria">
-
-        <option value="Cuotas">
-          Cuotas
-        </option>
-
-        <option value="Patrocinio">
-          Patrocinio
-        </option>
-
-        <option value="Equipaciones">
-          Equipaciones
-        </option>
-
-        <option value="Material">
-          Material
-        </option>
-
-        <option value="Campo">
-          Campo
-        </option>
-
-        <option value="Arbitraje">
-          Arbitraje
-        </option>
-
-        <option value="Otros">
-          Otros
-        </option>
-
-      </select>
-
-
-      <label>
-        Concepto
-      </label>
 
       <input
         type="text"
         id="concepto"
-        placeholder="Ej. Compra de balones"
+        placeholder="Concepto"
       >
 
+      <input
+        type="number"
+        id="cantidad"
+        placeholder="Cantidad (€)"
+        step="0.01"
+      >
 
-      <label>
-        Fecha
-      </label>
+      <input
+        type="text"
+        id="categoria"
+        placeholder="Categoría"
+      >
 
       <input
         type="date"
         id="fecha"
       >
 
-
       <button onclick="anadirMovimiento()">
-        ➕ Añadir movimiento
+        Guardar movimiento
       </button>
 
-      <div id="adminMessage"></div>
+      <div id="adminMensaje"></div>
 
     </section>
 
 
-    <!-- MOVIMIENTOS -->
-
-    <section>
+    <section id="movimientosSection" class="oculto">
 
       <h2>📋 Movimientos</h2>
 
@@ -423,13 +282,13 @@
             <tr>
               <th>Fecha</th>
               <th>Tipo</th>
-              <th>Categoría</th>
               <th>Concepto</th>
+              <th>Categoría</th>
               <th>Cantidad</th>
             </tr>
           </thead>
 
-          <tbody id="tablaMovimientos">
+          <tbody id="movimientos">
           </tbody>
 
         </table>
@@ -438,481 +297,269 @@
 
     </section>
 
-
-    <!-- GRÁFICA -->
-
-    <section>
-
-      <h2>📊 Resumen por categoría</h2>
-
-      <div id="grafica">
-        Todavía no hay movimientos registrados.
-      </div>
-
-    </section>
-
-
-    <button class="logout" onclick="logout()">
-      Cerrar sesión
-    </button>
-
   </main>
 
 
   <script>
 
     /*
-      CUENTAS DE PRUEBA
+      CONFIGURACIÓN SUPABASE
 
       IMPORTANTE:
-      Estas credenciales son SOLO para esta primera versión.
-
-      Más adelante las sustituiremos por autenticación real
-      y una base de datos segura.
+      Sustituye SOLO los valores entre comillas
+      cuando lleguemos al siguiente paso.
     */
 
-    const cuentas = {
+    const SUPABASE_URL = "https://uxpvpmugahsoagyysofn.supabase.co";
 
-      user: {
-        password: "user123",
-        tipo: "usuario"
-      },
-
-      admin: {
-        password: "admin123",
-        tipo: "admin"
-      }
-
-    };
-
-
-    /*
-      MOVIMIENTOS DE PRUEBA
-
-      Más adelante estos datos estarán en una base de datos real.
-    */
-
-    let movimientos =
-      JSON.parse(localStorage.getItem("jujosfc_movimientos")) || [];
+    const SUPABASE_KEY = "sb_publishable_jnVZ_TOSXwjWt0uOXZSMaA_a6N4qj_8";
 
 
     let usuarioActual = null;
 
 
-    function login() {
+    async function iniciarSesion() {
 
-      const usuario =
-        document.getElementById("usuario").value.trim();
+      const email =
+        document.getElementById("email").value;
 
       const password =
         document.getElementById("password").value;
 
-      const cuenta = cuentas[usuario];
+      const mensaje =
+        document.getElementById("loginMensaje");
 
+      if (!email || !password) {
 
-      if (!cuenta || cuenta.password !== password) {
-
-        document.getElementById("loginError").textContent =
-          "Usuario o contraseña incorrectos.";
-
-        return;
-      }
-
-
-      usuarioActual = {
-        nombre: usuario,
-        tipo: cuenta.tipo
-      };
-
-
-      document.getElementById("loginBox")
-        .classList.add("hidden");
-
-      document.getElementById("contenido")
-        .classList.remove("hidden");
-
-
-      document.getElementById("bienvenida").textContent =
-        "Sesión iniciada como: " + usuario;
-
-
-      if (cuenta.tipo === "admin") {
-
-        document.getElementById("adminPanel")
-          .classList.remove("hidden");
-
-      }
-
-
-      prepararFiltro();
-
-      mostrarMovimientos();
-
-    }
-
-
-    function logout() {
-
-      usuarioActual = null;
-
-      document.getElementById("contenido")
-        .classList.add("hidden");
-
-      document.getElementById("loginBox")
-        .classList.remove("hidden");
-
-      document.getElementById("usuario").value = "";
-      document.getElementById("password").value = "";
-
-    }
-
-
-    function anadirMovimiento() {
-
-      if (!usuarioActual || usuarioActual.tipo !== "admin") {
+        mensaje.innerHTML =
+          "<p>Introduce email y contraseña.</p>";
 
         return;
-
       }
 
+      try {
 
-      const tipo =
-        document.getElementById("tipo").value;
+        const respuesta = await fetch(
+          SUPABASE_URL + "/auth/v1/token?grant_type=password",
+          {
+            method: "POST",
 
-      const cantidad =
-        parseFloat(
-          document.getElementById("cantidad").value
+            headers: {
+              "apikey": SUPABASE_KEY,
+              "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+              email: email,
+              password: password
+            })
+          }
         );
 
-      const categoria =
-        document.getElementById("categoria").value;
+        const datos = await respuesta.json();
 
-      const concepto =
-        document.getElementById("concepto").value.trim();
-
-      const fecha =
-        document.getElementById("fecha").value;
-
-
-      if (
-        !cantidad ||
-        cantidad <= 0 ||
-        !concepto ||
-        !fecha
-      ) {
-
-        document.getElementById("adminMessage").innerHTML =
-          "<p class='error'>Completa todos los campos.</p>";
-
-        return;
-
-      }
-
-
-      movimientos.push({
-
-        tipo: tipo,
-
-        cantidad: cantidad,
-
-        categoria: categoria,
-
-        concepto: concepto,
-
-        fecha: fecha
-
-      });
-
-
-      localStorage.setItem(
-        "jujosfc_movimientos",
-        JSON.stringify(movimientos)
-      );
-
-
-      document.getElementById("cantidad").value = "";
-      document.getElementById("concepto").value = "";
-      document.getElementById("fecha").value = "";
-
-
-      document.getElementById("adminMessage").innerHTML =
-        "<p class='positivo'>Movimiento añadido correctamente.</p>";
-
-
-      prepararFiltro();
-
-      mostrarMovimientos();
-
-    }
-
-
-    function prepararFiltro() {
-
-      const select =
-        document.getElementById("filtroAno");
-
-      const anos = new Set();
-
-      movimientos.forEach(function(movimiento) {
-
-        if (movimiento.fecha) {
-
-          anos.add(
-            movimiento.fecha.substring(0, 4)
+        if (!respuesta.ok) {
+          throw new Error(
+            datos.error_description ||
+            "No se ha podido iniciar sesión."
           );
+        }
+
+        usuarioActual = datos;
+
+        document.getElementById("loginSection")
+          .classList.add("oculto");
+
+        document.getElementById("panel")
+          .classList.remove("oculto");
+
+        document.getElementById("movimientosSection")
+          .classList.remove("oculto");
+
+        cargarMovimientos();
+
+        if (
+          email === "administrador@jujosfc.com"
+        ) {
+
+          document.getElementById("adminPanel")
+            .classList.remove("oculto");
 
         }
 
-      });
+      } catch (error) {
 
-
-      select.innerHTML =
-        '<option value="todos">Todos</option>';
-
-
-      Array.from(anos)
-        .sort()
-        .reverse()
-        .forEach(function(ano) {
-
-          const option =
-            document.createElement("option");
-
-          option.value = ano;
-          option.textContent = ano;
-
-          select.appendChild(option);
-
-        });
-
-    }
-
-
-    function obtenerMovimientosFiltrados() {
-
-      const filtro =
-        document.getElementById("filtroAno").value;
-
-
-      if (filtro === "todos") {
-
-        return movimientos;
+        mensaje.innerHTML =
+          "<p>❌ " + error.message + "</p>";
 
       }
 
-
-      return movimientos.filter(function(movimiento) {
-
-        return movimiento.fecha.startsWith(filtro);
-
-      });
-
     }
 
 
-    function mostrarMovimientos() {
+    async function cargarMovimientos() {
 
-      const lista =
-        obtenerMovimientosFiltrados();
+      const respuesta = await fetch(
+        SUPABASE_URL + "/rest/v1/movimientos?select=*&order=fecha.desc",
+        {
+          headers: {
+            "apikey": SUPABASE_KEY,
+            "Authorization":
+              "Bearer " + usuarioActual.access_token
+          }
+        }
+      );
 
+      const movimientos = await respuesta.json();
+
+      const tabla =
+        document.getElementById("movimientos");
+
+      tabla.innerHTML = "";
 
       let ingresos = 0;
       let gastos = 0;
 
+      movimientos.forEach(movimiento => {
 
-      const tabla =
-        document.getElementById("tablaMovimientos");
+        const cantidad =
+          Number(movimiento.cantidad);
 
+        if (movimiento.tipo === "ingreso") {
+          ingresos += cantidad;
+        } else {
+          gastos += cantidad;
+        }
 
-      tabla.innerHTML = "";
+        const fila =
+          document.createElement("tr");
 
+        fila.innerHTML = `
+          <td>${movimiento.fecha}</td>
+          <td>${movimiento.tipo}</td>
+          <td>${movimiento.concepto}</td>
+          <td>${movimiento.categoria}</td>
+          <td>${cantidad.toFixed(2)} €</td>
+        `;
 
-      lista
-        .slice()
-        .sort(function(a, b) {
+        tabla.appendChild(fila);
 
-          return b.fecha.localeCompare(a.fecha);
-
-        })
-        .forEach(function(movimiento) {
-
-          if (movimiento.tipo === "ingreso") {
-
-            ingresos += movimiento.cantidad;
-
-          } else {
-
-            gastos += movimiento.cantidad;
-
-          }
-
-
-          const fila =
-            document.createElement("tr");
-
-
-          const clase =
-            movimiento.tipo === "ingreso"
-              ? "positivo"
-              : "negativo";
-
-
-          const signo =
-            movimiento.tipo === "ingreso"
-              ? "+"
-              : "-";
-
-
-          fila.innerHTML = `
-
-            <td>${formatearFecha(movimiento.fecha)}</td>
-
-            <td>
-              ${movimiento.tipo === "ingreso"
-                ? "💵 Ingreso"
-                : "💸 Gasto"}
-            </td>
-
-            <td>${movimiento.categoria}</td>
-
-            <td>${movimiento.concepto}</td>
-
-            <td class="${clase}">
-              ${signo}${formatearEuros(movimiento.cantidad)}
-            </td>
-
-          `;
-
-
-          tabla.appendChild(fila);
-
-        });
-
-
-      const saldo =
-        ingresos - gastos;
-
+      });
 
       document.getElementById("totalIngresos")
         .textContent =
-        formatearEuros(ingresos);
-
+        ingresos.toFixed(2) + " €";
 
       document.getElementById("totalGastos")
         .textContent =
-        formatearEuros(gastos);
-
+        gastos.toFixed(2) + " €";
 
       document.getElementById("saldo")
         .textContent =
-        formatearEuros(saldo);
-
-
-      crearResumenCategorias(lista);
+        (ingresos - gastos).toFixed(2) + " €";
 
     }
 
 
-    function crearResumenCategorias(lista) {
+    async function anadirMovimiento() {
 
-      const categorias = {};
+      const tipo =
+        document.getElementById("tipo").value;
 
+      const concepto =
+        document.getElementById("concepto").value;
 
-      lista.forEach(function(movimiento) {
+      const cantidad =
+        document.getElementById("cantidad").value;
 
-        if (!categorias[movimiento.categoria]) {
+      const categoria =
+        document.getElementById("categoria").value;
 
-          categorias[movimiento.categoria] = 0;
+      const fecha =
+        document.getElementById("fecha").value;
 
-        }
+      const mensaje =
+        document.getElementById("adminMensaje");
 
+      if (
+        !concepto ||
+        !cantidad ||
+        !categoria ||
+        !fecha
+      ) {
 
-        if (movimiento.tipo === "gasto") {
-
-          categorias[movimiento.categoria] +=
-            movimiento.cantidad;
-
-        }
-
-      });
-
-
-      const contenedor =
-        document.getElementById("grafica");
-
-
-      const claves =
-        Object.keys(categorias);
-
-
-      if (claves.length === 0) {
-
-        contenedor.innerHTML =
-          "Todavía no hay gastos registrados.";
+        mensaje.innerHTML =
+          "<p>❌ Completa todos los campos.</p>";
 
         return;
-
       }
 
+      try {
 
-      let html = "<table>";
+        const respuesta = await fetch(
+          SUPABASE_URL + "/rest/v1/movimientos",
+          {
+            method: "POST",
 
-      html += `
-        <thead>
-          <tr>
-            <th>Categoría</th>
-            <th>Gastos</th>
-          </tr>
-        </thead>
-        <tbody>
-      `;
+            headers: {
+              "apikey": SUPABASE_KEY,
+              "Authorization":
+                "Bearer " + usuarioActual.access_token,
+              "Content-Type":
+                "application/json",
+              "Prefer": "return=minimal"
+            },
 
+            body: JSON.stringify({
 
-      claves.forEach(function(categoria) {
+              tipo: tipo,
 
-        html += `
+              concepto: concepto,
 
-          <tr>
-            <td>${categoria}</td>
-            <td class="negativo">
-              ${formatearEuros(categorias[categoria])}
-            </td>
-          </tr>
+              cantidad: Number(cantidad),
 
-        `;
+              categoria: categoria,
 
-      });
+              fecha: fecha,
 
+              usuario:
+                usuarioActual.user.id
 
-      html += "</tbody></table>";
+            })
+          }
+        );
 
+        if (!respuesta.ok) {
 
-      contenedor.innerHTML = html;
+          const error =
+            await respuesta.text();
 
-    }
+          throw new Error(error);
 
-
-    function formatearEuros(numero) {
-
-      return numero.toLocaleString(
-        "es-ES",
-        {
-          minimumFractionDigits: 2,
-          maximumFractionDigits: 2
         }
-      ) + " €";
 
-    }
+        mensaje.innerHTML =
+          "<p>✅ Movimiento guardado correctamente.</p>";
 
+        document.getElementById("concepto")
+          .value = "";
 
-    function formatearFecha(fecha) {
+        document.getElementById("cantidad")
+          .value = "";
 
-      const partes =
-        fecha.split("-");
+        document.getElementById("categoria")
+          .value = "";
 
-      return partes[2] + "/" +
-             partes[1] + "/" +
-             partes[0];
+        cargarMovimientos();
+
+      } catch (error) {
+
+        mensaje.innerHTML =
+          "<p>❌ Error al guardar: " +
+          error.message +
+          "</p>";
+
+      }
 
     }
 
@@ -920,4 +567,3 @@
 
 </body>
 </html>
-```
